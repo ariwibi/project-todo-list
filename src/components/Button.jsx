@@ -1,6 +1,9 @@
 import { cva } from "class-variance-authority";
 import PropTypes from "prop-types";
-const button = cva(["text-xl", "rounded-sm", "first:mr-3"], {
+import LocaleContext from "../contexts/LocaleContext";
+import { useContext } from "react";
+import { onDeleteTodo } from "../utils/delete";
+const button = cva(["text-xl", "rounded-sm", "first:mr-3 first:mb-3"], {
   variants: {
     intent: {
       primary: [
@@ -21,10 +24,18 @@ const button = cva(["text-xl", "rounded-sm", "first:mr-3"], {
     size: "medium",
   },
 });
-export default function Button({ children, intent }) {
-  return <button className={button({ intent })}>{children}</button>;
+export default function Button({ children, intent, id }) {
+  const { data, setData } = useContext(LocaleContext);
+  return (
+    <button
+      className={button({ intent })}
+      onClick={() => onDeleteTodo({ data, setData, id })}>
+      {children}
+    </button>
+  );
 }
 Button.propTypes = {
   children: PropTypes.string,
   intent: PropTypes.string,
+  id: PropTypes.string,
 };

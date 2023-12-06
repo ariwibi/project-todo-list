@@ -22,7 +22,7 @@ export default function Navigation() {
         <ul className={cn("gap-x-5 hidden sm:flex ")}>
           <LiLink url="/">Home</LiLink>
           <LiLink url="add">Add</LiLink>
-          <LiLink url="about">About me</LiLink>
+          <LiLink url="about">Complete</LiLink>
         </ul>
         <button className="sm:hidden" onClick={toggleNavbar}>
           <div className={cn("sm:hidden", "flex flex-col gap-3")}>
@@ -58,7 +58,7 @@ export default function Navigation() {
           <ul className={cn("gap-y-3 flex flex-col mt-5")}>
             <LiLink url="/">Home</LiLink>
             <LiLink url="add">Add</LiLink>
-            <LiLink url="about">About me</LiLink>
+            <LiLink url="about">Complete</LiLink>
           </ul>
         </div>
       </nav>
