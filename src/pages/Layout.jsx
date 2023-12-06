@@ -7,7 +7,7 @@ export default function RootLayout() {
       <header className="w-full">
         <Navigation />
       </header>
-      <main>
+      <main className="w-full ">
         <Outlet />
       </main>
       <footer></footer>

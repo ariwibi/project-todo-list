@@ -1,3 +1,5 @@
+import ShowData from "../components/ShowData";
+
 export default function HomePage() {
-  return <p>Home page</p>;
+  return <ShowData />;
 }

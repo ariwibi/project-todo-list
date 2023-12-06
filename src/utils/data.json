@@ -1,0 +1,26 @@
+[
+    {
+        "id": "1",
+        "activity": "ngoding",
+        "isComplete": false,
+        "date": "rabu-6-12-2023"
+    },
+    {
+        "id": "2",
+        "activity": "read book",
+        "isComplete": false,
+        "date": "rabu-6-12-2023"
+    },
+    {
+        "id": "3",
+        "activity": "learn",
+        "isComplete": false,
+        "date": "rabu-6-12-2023"
+    },
+    {
+        "id": "4",
+        "activity": "workout",
+        "isComplete": false,
+        "date": "rabu-6-12-2023"
+    }
+]

@@ -14,7 +14,7 @@ export default function Navigation() {
         className={cn(
           "w-full h-20",
           "px-5 sm:px-10",
-          "text-white bg-slate-900",
+          "text-white bg-slate-800",
           "flex justify-between items-center",
           "text-xl"
         )}>
@@ -45,7 +45,7 @@ export default function Navigation() {
           className={
             nav === false
               ? "hidden"
-              : "absolute h-60 w-52 top-2 right-2 bg-slate-800 px-10 py-5 sm:hidden rounded-md"
+              : "absolute h-60 w-52 top-2 right-2 bg-slate-700 px-10 py-5 sm:hidden rounded-md"
           }>
           <div className=" relative">
             <button className="sm:hidden " onClick={toggleNavbar}>
