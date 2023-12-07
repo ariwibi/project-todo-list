@@ -1,3 +1,5 @@
+import AddTodo from "../components/AddTodo";
+
 export default function AddPage() {
-  return <p>Add</p>;
+  return <AddTodo />;
 }

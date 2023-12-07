@@ -5,12 +5,13 @@ import LocaleContext from "../contexts/LocaleContext";
 import { onDeleteTodo } from "../utils/delete";
 import { onCompleteHandler } from "../utils/isCompleted";
 
-export default function ShowData() {
+export default function Complete() {
   const { data, setData } = useContext(LocaleContext);
   if (data.length <= 0) {
     return <p>Loading...</p>;
   }
-  const onProgress = data.filter((itemData) => itemData.isComplete === false);
+
+  const onProgress = data.filter((itemData) => itemData.isComplete);
   return (
     <section className={cn("w-11/12 mx-auto", "flex flex-col items-center")}>
       <div
@@ -19,7 +20,7 @@ export default function ShowData() {
           "font-bold text-3xl sm:text-4xl",
           "mt-5"
         )}>
-        <h1>Your Todo</h1>
+        <h1>Your Todo Completed</h1>
       </div>
       {onProgress.map((dataTodo) => (
         <article
@@ -44,7 +45,7 @@ export default function ShowData() {
               onClick={() =>
                 onCompleteHandler({ data, setData, id: dataTodo.id })
               }>
-              Complete
+              unComplete
             </Button>
           </div>
         </article>

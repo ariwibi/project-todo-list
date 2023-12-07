@@ -1,3 +1,5 @@
+import Complete from "../components/Completed";
+
 export default function AboutPage() {
-  return <p>About Page</p>;
+  return <Complete />;
 }

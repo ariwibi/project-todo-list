@@ -24,12 +24,10 @@ const button = cva(["text-xl", "rounded-sm", "first:mr-3 first:mb-3"], {
     size: "medium",
   },
 });
-export default function Button({ children, intent, id }) {
+export default function Button({ children, intent, onClick }) {
   const { data, setData } = useContext(LocaleContext);
   return (
-    <button
-      className={button({ intent })}
-      onClick={() => onDeleteTodo({ data, setData, id })}>
+    <button className={button({ intent })} onClick={onClick} type="submit">
       {children}
     </button>
   );
@@ -37,5 +35,5 @@ export default function Button({ children, intent, id }) {
 Button.propTypes = {
   children: PropTypes.string,
   intent: PropTypes.string,
-  id: PropTypes.string,
+  onClick: PropTypes.func,
 };
