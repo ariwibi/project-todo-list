@@ -11,6 +11,9 @@ export default function ShowData() {
     return <p>Loading...</p>;
   }
   const onProgress = data.filter((itemData) => itemData.isComplete === false);
+  if (onProgress <= 0) {
+    return <p>Belum ada data</p>;
+  }
   return (
     <section className={cn("w-11/12 mx-auto", "flex flex-col items-center")}>
       <div

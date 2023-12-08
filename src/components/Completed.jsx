@@ -12,8 +12,16 @@ export default function Complete() {
   }
 
   const onProgress = data.filter((itemData) => itemData.isComplete);
+  if (onProgress <= 0) {
+    return <p>Belum ada data</p>;
+  }
   return (
-    <section className={cn("w-11/12 mx-auto", "flex flex-col items-center")}>
+    <section
+      className={cn(
+        "w-11/12 mx-auto",
+        "flex flex-col items-center bg-pink-300",
+        onProgress <= 0 ? "-mt-28" : ""
+      )}>
       <div
         className={cn(
           "w-full sm:w-9/12 md:w-8/12 lg:w-6/12",

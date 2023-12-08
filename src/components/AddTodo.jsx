@@ -24,7 +24,7 @@ export default function AddTodo() {
     navigate("/");
   }
   return (
-    <section className="w-11/12 mx-auto flex flex-col items-center mt-20">
+    <section className="w-11/12 mx-auto flex flex-col items-center ">
       <div className="w-full sm:w-9/12 md:w-8/12 lg:w-6/12 mb-5 text-3xl sm:text-4xl font-bold">
         <h1>Input Todo</h1>
       </div>
